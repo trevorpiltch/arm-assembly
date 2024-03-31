@@ -1,3 +1,5 @@
 #/bin/zsh
 
-make DEBUG=1
+cd $1
+
+make file=$2 DEBUG=1
