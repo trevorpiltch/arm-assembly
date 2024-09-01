@@ -22,7 +22,7 @@ loop: 	LDRB	W5, [X4], #1 	// load character and inc pointer
 // If we got here then the letter is upper case, so convert it
 	SUB	W5, W5, #('A'-'a')
 cont: // end if
-    STRB    W5, [X3], #1    // store character to output str
+	STRB    W5, [X3], #1    // store character to output str
         CMP     W5, #0          // stop on hitting a null character
         B.NE    loop            // loop if character isn't null
 // Setup the parameters to print our hex number
